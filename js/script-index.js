@@ -4,7 +4,7 @@ let count = 3;
 const nextButton = document.querySelector(".nextButton");
 const prevButton = document.querySelector(".prevButton");
 
-const url = "http://www.cms-ca-kpn.no/wp-json";
+const url = "https://www.cms-ca-kpn.no/wp-json";
 const endpoint = "/wp/v2/posts?per_page=30";
 
 async function getApi(url) {
