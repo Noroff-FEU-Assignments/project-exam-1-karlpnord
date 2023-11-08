@@ -9,12 +9,23 @@
 
 body {
    font-family: var(--ff-poppins);
+   background-color: var(--bg-reg);
+}
+
+main {
+   padding: 0 2em;
+   margin: 2em 0;
+}
+
+/** Utility Classes **/
+.flex-col-to-row {
+   display: flex;
+   flex-direction: column;
 }
 
 /** Header and Navigation **/
 header {
    width: 100%;
-   background-color: #F4F4F3;
    height: 80px;
    display: flex;
    align-items: center;
@@ -86,7 +97,21 @@ header i {
 
 /** Responsive **/
 @media (min-width: 730px) {
+   /** General styling **/
+   main, header {
+      padding: 0 4em;
+   }
+
+   /** Utility Classes **/
+   .flex-col-to-row {
+      flex-direction: row;
+   } 
+   
    /** Header and Navigation **/
+   header {
+      height: 100px;
+   }
+
    .hamburger-menu {
       display: none;
    }
