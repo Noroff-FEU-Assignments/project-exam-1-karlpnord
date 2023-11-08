@@ -1,0 +1,12 @@
+@font-face {
+   font-family: "Poppins";
+   src: url("/fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+:root {
+   --ff-poppins: "Poppins", sans-serif;
+   --fw-light: 300;
+   --fw-medium: 500;
+   --fw-sbold: 600;
+   --fw-bold: 700;
+}

@@ -1,0 +1,53 @@
+* {
+   padding: 0;
+   margin: 0;
+}
+
+button {
+   padding: 8px;
+}
+
+.container {
+   margin: 20px auto;
+   display: flex;
+   flex-direction: column;
+}
+
+#slider {
+   display: flex;
+   gap: 2em;
+}
+
+.test {
+   flex: 1;
+   transition: all 300ms ease;
+}
+
+.test2 {
+   padding: 1em 0.5em;
+}
+
+.test:hover {
+   box-shadow: 1px -1px 29px 2px rgba(0,0,0,0.2);
+   transform: translateY(-0.5em);
+}
+
+.test img {
+   max-width: 100%;
+   height: auto;
+}
+
+.buttons {
+   display: flex;
+   justify-content: space-between;
+}
+
+.buttons button {
+   background: black;
+   color: white;
+}
+
+.buttons .disabled {
+   background: white;
+   color: black;
+}
