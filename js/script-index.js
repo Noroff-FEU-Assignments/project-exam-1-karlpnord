@@ -1,4 +1,4 @@
-const tag = document.querySelector("#slider");
+const container = document.querySelector(".recent-posts");
 let count = 3;
 
 const nextButton = document.querySelector(".nextButton");
@@ -28,10 +28,9 @@ async function handlePosts() {
    console.log(data[0].title.rendered);
    console.log(data[0].date);
    for(var i = 0; i < 3; i++) {
-      tag.innerHTML += `
-         <a class="test">
+      container.innerHTML += `
+         <a class="recent-posts__post">
             ${data[i].content.rendered}
-            <h2 class="test2">${data[i].title.rendered}</h2>
          </a>
          `;
    }
@@ -40,7 +39,7 @@ async function handlePosts() {
    prevButton.addEventListener("click", prevSlide);
 
    function nextSlide() {
-      tag.innerHTML = "";
+      container.innerHTML = "";
       for(var i = 0; i < 3; i++) {
          createNewSlide();
          count++;
@@ -50,7 +49,7 @@ async function handlePosts() {
    
    function prevSlide() {
       count = count - 6;
-      tag.innerHTML = "";
+      container.innerHTML = "";
       for(var i = 0; i < 3; i++) {
          createNewSlide();
          count++;
@@ -59,10 +58,9 @@ async function handlePosts() {
    }
    
    function createNewSlide() {
-      tag.innerHTML += `
-         <a class="test">
+      container.innerHTML += `
+         <a class="recent-posts__post">
             ${data[count].content.rendered}
-            <h2 class="test2">${data[count].title.rendered}</h2>
          </a>
       `;
    }

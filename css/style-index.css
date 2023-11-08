@@ -1,5 +1,8 @@
+/** Hero section **/
 .hero-section {
    gap: 2em;
+   background-color: var(--bg-reg);
+   padding: 2em 2em;
 }
 
 .hero-section__image img {
@@ -9,10 +12,71 @@
    object-position: 25% 25%;
 }
 
+/** Recent posts **/
+.recent-posts__post img {
+   width: 100%;
+   height: auto;
+}
+
+.recent-posts__post {
+   transition: all 300ms ease;
+   cursor: pointer;
+}
+
+.recent-posts__post:hover {
+   box-shadow: 1px -1px 29px 2px rgba(0,0,0,0.2);
+   transform: translateY(-0.5em);
+}
+
+.post-description,
+.post-ingredients-heading,
+.post-ingredients-list,
+.post-instruction-list,
+.post-instruction-heading {
+   display: none;
+}
+
+.buttons {
+   display: none;
+}
+
+.recent-posts-section {
+   background-color: #fff;
+   padding: 0 2em;
+   gap: 3em;
+}
+
+.recent-posts {
+   gap: 4em;
+}
+
+.recent-posts-heading {
+   text-align: center;
+}
+
+.recent-posts-heading h2 {
+   font-size: 1.75em;
+}
+
+.recent-posts-heading p {
+   max-width: 31.25em;
+   margin: 2em auto;
+}
+
+.post-date {
+   font-weight: var(--fw-light);
+   font-size: 0.85em;
+}
+
+.post-title {
+   font-size: 1.75em;
+}
+
 @media (min-width: 730px) {
    /** Hero section **/
    .hero-section {
       gap: 4em;
+      padding: 4em 4em;
    }
 
    .hero-section__image img {
@@ -35,12 +99,52 @@
       justify-content: center;
       gap: 1em;
    }
+
+   /** Recent posts section **/
+
+   .buttons {
+      display: flex;
+      justify-content: center;
+      margin: 4em 0;
+      gap: 2em;
+   }
+
+   .buttons button {
+      border-radius: 100%;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      transition: 300ms ease;
+      outline: none;
+      border: 3px solid rgb(169, 169, 169);
+   }
+
+   .buttons button:hover {
+      background: lightgrey;
+   }
+
+   .buttons button i {
+      font-size: 2em;
+   }
+
+   .recent-posts-section {
+      padding: 0 4em;
+      margin-top: 5em;
+   }
+
+   .recent-posts-heading h2 {
+      font-size: 2em;
+   }
+   
+   .recent-posts__post {
+      padding: 2em;
+   }
 }
 
 @media (min-width: 1200px) {
    /** Hero section **/
    .hero-section {
-      gap: 8em;
+      gap: 6em;
    }
 
    .hero-section__header h1 {
