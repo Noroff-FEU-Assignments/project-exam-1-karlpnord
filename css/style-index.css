@@ -2,7 +2,9 @@
 .hero-section {
    gap: 2em;
    background-color: var(--bg-reg);
-   padding: 2em 2em;
+   width: 90%;
+   max-width: 30em;
+   margin: 0 auto;
 }
 
 .hero-section__image img {
@@ -13,14 +15,33 @@
 }
 
 /** Recent posts **/
+.recent-posts-section {
+   background-color: #fff;
+   gap: 3em;
+   width: 100%;
+   padding: 4em 0;
+}
+
+.recent-posts-heading,
+.recent-posts-container {
+   width: 90%;
+   max-width: 30em;
+   margin: 0 auto;
+}
+
 .recent-posts__post img {
    width: 100%;
    height: auto;
+   box-shadow: 1px -1px 29px 2px rgba(0,0,0,0.2);
 }
 
 .recent-posts__post {
    transition: all 300ms ease;
    cursor: pointer;
+   padding: 2em;
+   background-color: var(--bg-reg);
+   max-width: 32.5em;
+   margin: 0 auto;
 }
 
 .recent-posts__post:hover {
@@ -40,14 +61,10 @@
    display: none;
 }
 
-.recent-posts-section {
-   background-color: #fff;
-   padding: 0 2em;
-   gap: 3em;
-}
-
 .recent-posts {
    gap: 4em;
+   display: flex;
+   flex-direction: column;
 }
 
 .recent-posts-heading {
@@ -72,11 +89,44 @@
    font-size: 1.75em;
 }
 
+/** Contact Section **/
+.contact-section {
+   width: 90%;
+   max-width: 30em;
+   margin: 0 auto;
+   background: #888;
+   background-blend-mode: multiply;
+   background-image: url(/images/contact-image.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   min-height: 100vh;
+   justify-content: center;
+   align-items: center;
+   gap: 2em;
+   margin-bottom: 4em;
+   text-align: center;
+}
+
+.contact-section h2 {
+   color: #fff;
+   font-size: 2em;
+   letter-spacing: 1.5px;
+}
+
+.contact-section button {
+   border: none;
+   background-color: #000;
+   color: #fff;
+   padding: 0.75em 2em;
+   font-size: 1.35em;
+}
+
 @media (min-width: 730px) {
    /** Hero section **/
    .hero-section {
       gap: 4em;
-      padding: 4em 4em;
+      padding: 4em 0;
+      max-width: 93.75em;
    }
 
    .hero-section__image img {
@@ -101,6 +151,33 @@
    }
 
    /** Recent posts section **/
+   .recent-posts-section {
+      padding: 4em 0;
+      margin-top: 5em;
+   }
+
+   .recent-posts-heading h2 {
+      font-size: 2em;
+   }
+
+   .recent-posts-heading,
+   .recent-posts-container {
+      max-width: 93.75em;
+   }
+
+   /** Contact Section **/
+   .contact-section {
+      max-width: 93.75em;
+      background-image: url(/images/contact-image-desktop.png);
+      background-size: cover;
+      min-height: 60vh;
+   }
+}
+
+@media (min-width: 1000px) {
+   .recent-posts {
+      flex-direction: row;
+   }
 
    .buttons {
       display: flex;
@@ -110,34 +187,26 @@
    }
 
    .buttons button {
-      border-radius: 100%;
+      border-radius: 0.25em;
       width: 50px;
       height: 50px;
       cursor: pointer;
       transition: 300ms ease;
       outline: none;
-      border: 3px solid rgb(169, 169, 169);
+      border: 1px solid rgb(169, 169, 169);
    }
 
    .buttons button:hover {
       background: lightgrey;
    }
 
+   .buttons button.disabled:hover {
+      cursor: default;
+      background: #fff;
+   }
+
    .buttons button i {
       font-size: 2em;
-   }
-
-   .recent-posts-section {
-      padding: 0 4em;
-      margin-top: 5em;
-   }
-
-   .recent-posts-heading h2 {
-      font-size: 2em;
-   }
-   
-   .recent-posts__post {
-      padding: 2em;
    }
 }
 
