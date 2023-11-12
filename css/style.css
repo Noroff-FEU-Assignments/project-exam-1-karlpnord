@@ -115,11 +115,11 @@ footer {
 .social-media-icons {
    gap: 1em;
    justify-content: center;
-   font-size: 2.5em;
+   font-size: 2em;
 }
 
 footer p {
-   font-size: 20px;
+   font-size: 18px;
 }
 
 /** Responsive **/
@@ -154,6 +154,6 @@ footer p {
    }
 
    .logo a {
-      font-size: 1.75em;
+      font-size: 2em;
    }
 }

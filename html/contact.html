@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Food Blog - Homepage</title>
+   <link href="/css/style.css" rel="stylesheet">
+   <link href="/css/style-contact.css" rel="stylesheet">
+   <script src="https://kit.fontawesome.com/801ba823f5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+   <header>
+      <div class="logo">
+         <a href="/index.html">Food Blog</a>
+      </div>
+      <div class="header-right-side">
+         <div class="hamburger-menu">
+            <i class="fa-solid fa-bars" id="hamburger-icon"></i>
+         </div>
+         <nav class="nav-bar">
+            <ul class="nav-bar__list">
+               <li><a href="/html/blogs.html">Blog</a></li>
+               <li><a href="/html/about.html">About</a></li>
+               <li><a href="/html/contact.html" class="active-page">Contact</a></li>
+            </ul>
+         </nav>
+         <div class="instagram-logo">
+            <i class="fa-brands fa-instagram"></i>
+         </div>
+      </div>
+   </header>
+
+   <main>
+      <section class="information-section flex-col">
+         <h1>Get in touch.</h1>
+         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae tempora at aspernatur numquam dolorum rerum pariatur quibusdam consequatur perspiciatis fuga magnam culpa, blanditiis animi architecto quos obcaecati sunt ut provident assumenda eos. Nesciunt doloribus fugit soluta laboriosam ratione, expedita iusto, sed, recusandae itaque voluptatibus non exercitationem et nihil in voluptates.</p>
+         <div class="information-section__details flex-col-to-row">
+            <div>
+               <h4>email@example.com</h4>
+               <h4>+47 555 55 555</h4>
+            </div>
+            <div>
+               <h4>47 Demo Street</h4>
+               <h4>Oslo, Norway</h4>
+            </div>
+         </div>
+      </section>
+      <form class="flex-col form">
+         
+         <div class="form__item flex-col">
+            <label for="name">Name <span class="input-required">(min 8 characters)</span></label>
+            <input type="text" id="name" name="name">
+            <div class="input-error" id="nameError">Not a valid name!</div>
+         </div>
+         
+         <div class="form__item flex-col">
+            <label for="email">Email <span class="input-required">(required)</span></label>
+            <input type="email" id="email" name="email">
+            <div class="input-error" id="emailError">Not a valid email!</div>
+         </div>
+         
+         <div class="form__item flex-col">
+            <label for="subject">Subject <span class="input-required">(min 15 characters)</span></label>
+            <input type="text" id="subject" name="subject">
+            <div class="input-error" id="subjectError">Error</div>
+         </div>
+         
+         <div class="form__item flex-col">
+            <label for="message">Message <span class="input-required">(min 25 characters)</span></label>
+            <textarea name="message" id="message"></textarea>
+            <div class="input-error" id="messageError">Error</div>
+         </div>
+         
+         <button class="cta">Send</button>
+      </form>
+   </main>
+
+   <footer class="flex-col">
+     <div class="social-media-icons flex-row">
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-youtube"></i>
+      <i class="fa-brands fa-facebook"></i>
+     </div>
+     <p>Copyright 2023 &copy; Karl's Food Blog</p>
+   </footer>
+
+   <script src="/js/script.js"></script>
+   <script src="/js/script-contact.js"></script>
+</body>
+</html>

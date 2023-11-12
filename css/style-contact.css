@@ -1,0 +1,77 @@
+/** Page styling **/
+main {
+   width: 90%;
+   max-width: 42.5em;
+   margin: 2em auto;
+}
+
+.information-section {
+   gap: 2em;
+}
+
+.information-section__details {
+   gap: 1em;
+}
+
+.form__item {
+   gap: 1em;
+}
+
+/** CTA **/
+.cta {
+   color: #fff;
+   background-color: #000;
+   border: none;
+   height: 40px;
+   width: 33%;
+   font-size: 1em;
+   font-family: var(--ff-poppins);
+}
+
+/** Form styling **/
+input {
+   height: 40px;
+}
+
+textarea {
+   height: 100px;
+}
+
+label {
+   font-weight: var(--fw-light);
+   font-size: 0.9em;
+   margin-bottom: -15px;
+}
+
+form {
+   gap: 1em;
+}
+
+input:focus,
+textarea:focus {
+   border: 3px solid #767676;
+   outline: none;
+}
+
+input,
+textarea {
+   padding-left: 5px;
+   font-family: var(--ff-poppins);
+   border: 1px solid #767676;
+}
+
+textarea {
+   padding-top: 5px;
+}
+
+.input-error {
+   display: none;
+   color: red;
+   font-size: 12px;
+   margin-top: -12px;
+   margin-left: 2px;
+}
+
+.input-required {
+   font-size: 10px;
+}
