@@ -20,12 +20,31 @@ main {
 /** CTA **/
 .cta {
    color: #fff;
-   background-color: #000;
    border: none;
    height: 40px;
    width: 33%;
    font-size: 1em;
    font-family: var(--ff-poppins);
+   margin-top: 1.5em;
+   background-color: #000;
+}
+
+.cta-disabled {
+   background-color: #c4c4c4;
+}
+
+.cta-enabled {
+   background-color: #000;
+   transition: 300ms ease;
+}
+
+.cta-disabled:hover {
+   cursor: default;
+}
+
+.cta-enabled:hover {
+   cursor: pointer;
+   background-color: #4f4f4f;
 }
 
 /** Form styling **/
@@ -35,6 +54,7 @@ input {
 
 textarea {
    height: 100px;
+   resize: none;
 }
 
 label {
@@ -74,4 +94,47 @@ textarea {
 
 .input-required {
    font-size: 10px;
+} 
+
+/** Overlay Container **/
+.overlay-container {
+   width: 90%;
+   max-width: 42.5em;
+   background-color: var(--bg-reg);
+   position: absolute;
+   top: 50%;
+   text-align: center;
+   border: 1px solid #000;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 2em;
+   padding: 2.5em 1.5em; 
+}
+
+.close-button {
+   position: absolute;
+   top: 0;
+   right: 0;
+   border: none;
+   font-size: 1.5em;
+   padding: 0.25em;
+   cursor: pointer;
+   background-color: var(--bg-reg);
+}
+
+.cta-overlay {
+   width: 100%;
+}
+
+.overlay-container__info {
+   gap: 0.5em;
+   margin-top: 2em;
+}
+
+@media (min-width: 730px) {
+   .cta-overlay,
+   .overlay-container__info {
+      width: 50%;
+   }
 }

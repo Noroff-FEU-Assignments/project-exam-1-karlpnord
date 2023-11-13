@@ -10,6 +10,12 @@ const subjectError = document.querySelector("#subjectError");
 const message = document.querySelector("#message");
 const messageError = document.querySelector("#messageError");
 
+const form = document.querySelector(".form");
+const submit = document.querySelector(".cta-submit");
+const mainContainer = document.querySelector("main");
+const infoSection = document.querySelector(".information-section");
+const confirmSection = document.querySelector(".form-complete");
+
 function checkLength(value, len) {
    if(value.trim().length > len) {
       return true;
@@ -79,3 +85,53 @@ message.addEventListener("blur", function() {
       message.style.borderColor = "red";
    }
 });
+
+name.addEventListener("keyup", validateForm);
+email.addEventListener("keyup", validateForm);
+subject.addEventListener("keyup", validateForm);
+message.addEventListener("keyup", validateForm);
+
+function validateForm() {
+   if(checkLength(name.value, 7) && checkEmail(email.value) && checkLength(subject.value, 14) && checkLength(message.value, 24)) {
+      submit.disabled = false;
+      submit.classList.remove("cta-disabled");
+      submit.classList.add("cta-enabled");
+      confirmSection.textContent = "Form has been filled out correctly!";
+   } else {
+      submit.disabled = true;
+      submit.classList.remove("cta-enabled");
+      submit.classList.add("cta-disabled");
+      confirmSection.textContent = "";
+   }
+}
+
+submit.addEventListener("click", function (e) {
+   e.preventDefault();
+
+   form.style.opacity = "0.5"; 
+   infoSection.style.opacity = "0.5";
+
+   const overlayContainer = document.createElement("div");
+   overlayContainer.classList.add("overlay-container");
+   mainContainer.appendChild(overlayContainer);
+
+   overlayContainer.innerHTML = 
+      `
+         <button class="close-button close-overlay"><i        class="fa-solid fa-xmark"></i></button>
+         <div class="flex-col overlay-container__info">
+            <h3>Your message has been sent!</h3>
+            <p>Please be patient as we try to solve your question as fast as possible</p>
+         </div>
+         <button class="cta cta-overlay">View Posts</button>
+      `;
+
+   const closeOverlay = overlayContainer.querySelector(".close-button");
+   closeOverlay.addEventListener("click", removeOverlay);
+   
+
+   function removeOverlay() {
+      overlayContainer.style.display = "none";
+      form.style.opacity = "1";
+      infoSection.style.opacity = "1";
+   }
+}, true);

@@ -51,28 +51,28 @@
          <div class="form__item flex-col">
             <label for="name">Name <span class="input-required">(min 8 characters)</span></label>
             <input type="text" id="name" name="name">
-            <div class="input-error" id="nameError">Not a valid name!</div>
+            <div class="input-error" id="nameError">Min 8 characters</div>
          </div>
          
          <div class="form__item flex-col">
             <label for="email">Email <span class="input-required">(required)</span></label>
             <input type="email" id="email" name="email">
-            <div class="input-error" id="emailError">Not a valid email!</div>
+            <div class="input-error" id="emailError">Invalid email</div>
          </div>
          
          <div class="form__item flex-col">
             <label for="subject">Subject <span class="input-required">(min 15 characters)</span></label>
             <input type="text" id="subject" name="subject">
-            <div class="input-error" id="subjectError">Error</div>
+            <div class="input-error" id="subjectError">Min 15 characters</div>
          </div>
          
          <div class="form__item flex-col">
             <label for="message">Message <span class="input-required">(min 25 characters)</span></label>
             <textarea name="message" id="message"></textarea>
-            <div class="input-error" id="messageError">Error</div>
+            <div class="input-error" id="messageError">Min 25 characters</div>
          </div>
-         
-         <button class="cta">Send</button>
+         <div class="form-complete"></div>
+         <button class="cta cta-disabled cta-submit" disabled>Send</button>
       </form>
    </main>
 
