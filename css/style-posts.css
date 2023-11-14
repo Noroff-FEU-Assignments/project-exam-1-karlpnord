@@ -24,6 +24,8 @@ main {
    box-shadow: 1px -1px 29px 2px rgba(0,0,0,0.2);
    cursor: pointer;
    border-radius: 0.25em;
+   color: #000;
+   text-decoration: none;
 }
 
 .all-posts__post:hover {

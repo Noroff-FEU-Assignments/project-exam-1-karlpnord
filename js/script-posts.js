@@ -31,7 +31,7 @@ async function handlePosts() {
    const data = await getApi(newUrl);
    for(var i = 0; i < length; i++) {
       postsContainer.innerHTML += `
-         <a class="all-posts__post">
+         <a class="all-posts__post" href="blog-post.html?id=${data[i].id}">
             ${data[i].content.rendered}
          </a>
       `;

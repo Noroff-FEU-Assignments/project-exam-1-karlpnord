@@ -1,0 +1,62 @@
+main {
+   margin: 4em 0;
+}
+
+.post-container img{
+   width: 100%;
+   height: auto;
+   box-shadow: 1px -1px 29px 2px rgba(0,0,0,0.2);
+   border-radius: 0.25em;
+}
+
+.post-container {
+   width: 90%;
+   margin: 0 auto;
+   max-width: 30em;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   gap: 1em;
+   background-color: #fff;
+}
+
+.post-instruction-list,
+.post-ingredients-list {
+   list-style: none;
+}
+
+.post-date {
+   display: none;
+}
+
+.post-title {
+   font-size: 2em;
+}
+
+.post-description {
+   font-size: 14px;
+}
+
+.post-ingredients-heading,
+.post-instruction-heading {
+   font-size: 1.625em;
+   margin-top: 2em;
+}
+
+.post-ingredients-list,
+.post-instruction-list {
+   display: flex;
+   flex-direction: column;
+   gap: 1em;
+}
+
+@media (min-width: 730px) {
+   .post-container {
+      padding: 6em;
+      max-width: 45em;
+   }
+
+   main {
+      margin: 0;
+   }
+}
