@@ -1,0 +1,57 @@
+/** General styling **/
+main {
+   width: 90%;
+   max-width: 30em;
+   margin: 2em auto;
+   display: flex;
+   flex-direction: column;
+   gap: 5em;
+}
+
+.info-section,
+.image-section {
+   flex: 1;
+}
+
+/** Info section **/
+.info-section {
+   gap: 2em;
+}
+
+.info-section p {
+   font-weight: var(--fw-light);
+   font-size: 14px;
+}
+
+/** Image section **/
+.image-section {
+   margin: 0 auto;
+}
+
+.image-section img {
+   width: 100%;
+   max-width: 500px;
+}
+
+/** Responsive **/
+@media (min-width: 1000px) {
+   main {
+      flex-direction: row;
+      max-width: 93.75em;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4em;
+   }
+
+   .image-section img {
+      float: right;
+   }
+
+   .info-section p {
+      font-size: 16px;
+   }
+
+   .info-section h1 {
+      font-size: 1.75em;
+   }
+}

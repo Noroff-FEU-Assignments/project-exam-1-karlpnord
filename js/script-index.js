@@ -87,3 +87,9 @@ function checkCount() {
 }
 
 checkCount();
+
+/* Contact page button Locate to next page */
+const contactPageBtn = document.querySelector("#locateToContact");
+contactPageBtn.onclick = function() {
+   window.location.href = "/html/contact.html";
+}

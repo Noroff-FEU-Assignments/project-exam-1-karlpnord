@@ -120,6 +120,11 @@
    color: #fff;
    padding: 0.75em 2em;
    font-size: 1.35em;
+   transition: 300ms ease;
+}
+
+.contact-section button:hover {
+   background-color: #4a4a4a;
 }
 
 @media (min-width: 730px) {

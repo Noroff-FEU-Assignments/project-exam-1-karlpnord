@@ -52,6 +52,8 @@ header {
    left: -100%;
    width: 100%;
    background: #F4F4F3;
+   border-top: 1px solid #000;
+   border-bottom: 1px solid #000;
 }
 
 .nav-bar__list.show-nav {
@@ -103,11 +105,15 @@ header i {
    text-decoration-color: #000;
 }
 
+.nav-bar__list li a.active-page {
+   font-weight: var(--fw-bold);
+}
+
 /** Footer **/
 footer {
    width: 90%;
    margin: 0 auto;
-   padding: 4em 0;
+   padding: 2em 0;
    text-align: center;
    gap: 1em;
 }
@@ -147,6 +153,7 @@ footer p {
       display: flex;
       align-items: center;
       gap: 2em;
+      border: none;
    }
 
    .header-right-side {
