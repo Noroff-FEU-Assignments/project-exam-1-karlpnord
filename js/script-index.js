@@ -4,32 +4,25 @@ let count = 3;
 const nextButton = document.querySelector(".nextButton");
 const prevButton = document.querySelector(".prevButton");
 
-const url = "https://www.cms-ca-kpn.no/wp-json";
-const endpoint = "/wp/v2/posts?per_page=30";
+const url = "https://www.cms-ca-kpn.no/wp-json/wp/v2/posts?per_page=30";
 
-async function getApi(url) {
+async function getApi() {
    try {
       const response = await fetch(url);
-      if(response.ok) {
-         const data = await response.json();
-         return data;
-      } else {
-         console.log("an error");
-      }
+      const data = await response.json();
+      handlePosts(data);
    } catch(error) {
-      console.log("error");
+      container.innerHTML = "An error occured displaying the blog posts!";
+      container.classList.remove("recent-posts");
+      container.classList.add("error");
    }
 }
 
-async function handlePosts() {
-   const newUrl = url + endpoint;
-   const data = await getApi(newUrl);
-   console.log(data);
-   console.log(data[0].title.rendered);
-   console.log(data[0].date);
+async function handlePosts(data) {
+   container.innerHTML = "";
    for(var i = 0; i < 3; i++) {
       container.innerHTML += `
-         <a class="recent-posts__post">
+         <a class="recent-posts__post" href="/html/blog-post.html?id=${data[i].id}">
             ${data[i].content.rendered}
          </a>
          `;
@@ -59,14 +52,14 @@ async function handlePosts() {
    
    function createNewSlide() {
       container.innerHTML += `
-         <a class="recent-posts__post">
+         <a class="recent-posts__post" href="/html/blog-post.html?id=${data[count].id}">
             ${data[count].content.rendered}
          </a>
       `;
    }
 }
 
-handlePosts();
+getApi();
 
 function checkCount() {
    if(count <= 3) {

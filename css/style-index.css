@@ -42,6 +42,8 @@
    background-color: var(--bg-reg);
    max-width: 32.5em;
    margin: 0 auto;
+   color: #000;
+   text-decoration: none;
 }
 
 .recent-posts__post:hover {

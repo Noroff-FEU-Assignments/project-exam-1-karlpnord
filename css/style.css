@@ -29,6 +29,29 @@ main {
    display: flex;
 }
 
+/** Loading API and API error **/
+.loading {
+   border: 24px solid #c4c4c4;
+   border-top: 24px solid #000;
+   border-radius: 50%;
+   width: 200px;
+   height: 200px;
+   margin: 5em auto;
+   animation: loading 3s linear infinite;
+}
+
+@keyframes loading {
+   0% { transform: rotate(0deg); }
+   100% { transform: rotate(360deg); }
+}
+
+.error {
+   border: 1px solid red;
+   color: red;
+   text-align: center;
+   padding: 1em;
+}
+
 /** Header and Navigation **/
 header {
    width: 90%;

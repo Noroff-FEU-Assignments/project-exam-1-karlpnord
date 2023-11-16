@@ -1,45 +1,50 @@
-const url = "https://www.cms-ca-kpn.no/wp-json";
-const endpoint = "/wp/v2/posts?per_page=30";
+const url = "https://www.cms-ca-kpn.no/wp-json/wp/v2/posts?per_page=30";
 
-const postsContainer = document.querySelector(".posts-container");
+const postsContainer = document.querySelector("#postsContainer");
 const viewMoreBtn = document.querySelector(".view-more");
 let length = 6;
+let error = false;
 
 viewMoreBtn.onclick = function() {
    event.preventDefault();
    length = length + 6;
    postsContainer.innerHTML = "";
-   handlePosts();
+   getApi();
 }
 
-async function getApi(url) {
+async function getApi() {
    try {
       const response = await fetch(url);
-      if(response.ok) {
-         const data = await response.json();
-         return data;
-      } else {
-         console.log("an error");
-      }
+      const data = await response.json();
+      handlePosts(data);
    } catch(error) {
-      console.log("error");
+      postsContainer.classList.add("error");
+      postsContainer.innerHTML = "An error occured displaying the blog posts!";
+      postsContainer.classList.remove("posts-container");
+   } finally {
+      postsContainer.classList.remove("loading");
+      postsContainer.classList.add("posts-container");
    }
 }
 
-async function handlePosts() {
-   const newUrl = url + endpoint;
-   const data = await getApi(newUrl);
+async function handlePosts(data) {
+   postsContainer.innerHTML = "";
    for(var i = 0; i < length; i++) {
-      postsContainer.innerHTML += `
+       postsContainer.innerHTML += `
          <a class="all-posts__post" href="blog-post.html?id=${data[i].id}">
             ${data[i].content.rendered}
          </a>
       `;
+
+      if(length >= 12) {
+         const scrollingElement = (document.scrollingElement || document.body);
+         scrollingElement.scrollTop = scrollingElement.scrollHeight;
+      }
       
       if(length >= 30) {
          viewMoreBtn.style.display = "none";
       }
-   }
+   } 
 }
 
-handlePosts();
+getApi();

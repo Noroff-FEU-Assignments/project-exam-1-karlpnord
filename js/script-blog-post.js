@@ -10,7 +10,6 @@ const apiUrl = "https://www.cms-ca-kpn.no/wp-json/wp/v2/posts/" + id;
 
 const main = document.querySelector("main");
 const container = document.querySelector(".post-container");
-const newContainer = document.createElement("div");
 
 async function getApi() {
    try {
@@ -18,7 +17,10 @@ async function getApi() {
       const data = await response.json();
       handlePosts(data);
    } catch(error) {
-      console.log(error);
+      container.innerHTML = "An error occured displaying the blog post!";
+      container.classList.add("error");
+      container.style.padding = "1em";
+      container.style.margin = "3em auto";
    }
 }
 
