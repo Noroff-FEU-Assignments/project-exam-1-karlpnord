@@ -21,30 +21,26 @@ main {
    padding: 2em;
    transition: 300ms ease;
    background: #fff;
-   box-shadow: 1px -1px 29px 2px rgba(0,0,0,0.2);
+   box-shadow: var(--bs-reg);
    cursor: pointer;
    border-radius: 0.25em;
    color: #000;
    text-decoration: none;
 }
-
 .all-posts__post:hover {
    transform: translateY(-0.5em);
 }
-
 .all-posts__post img{
    width: 100%;
    height: auto;
-   box-shadow: 1px -1px 29px 2px rgba(0,0,0,0.2);
+   box-shadow: var(--bs-reg);
 }
-
 .post-ingredients-heading,
 .post-ingredients-list,
 .post-instruction-heading,
 .post-instruction-list {
    display: none;
 }
-
 .post-description {
    font-size: 12px;
 }
@@ -56,13 +52,14 @@ main {
    padding: 0.5em;
    background-color: #fff;
    transition: 300ms ease;
+   cursor: pointer;
+   border: 1px solid #c4c4c4;
+   border-radius: 0.25em;
 }
-
 .view-more:hover {
-   box-shadow: 1px -1px 29px 2px rgba(0,0,0,0.2);
+   box-shadow: var(--bs-reg);
    transform: translateY(-0.1em);
 }
-
 .view-more__text {
    font-family: var(--ff-poppins);
 }
@@ -72,7 +69,6 @@ main {
    main {
       max-width: 93.75em;
    }
-
    .posts-container {
       display: grid;
       grid-template-columns: 1fr 1fr;

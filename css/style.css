@@ -6,16 +6,15 @@
    margin: 0;
    box-sizing: border-box;
 }
-
 body {
    font-family: var(--ff-poppins);
    background-color: var(--bg-reg);
 }
-
 main {
    display: flex;
    flex-direction: column;
    gap: 3em;
+   margin: 2em auto;
 }
 
 /** Utility Classes **/
@@ -24,7 +23,6 @@ main {
    display: flex;
    flex-direction: column;
 }
-
 .flex-row {
    display: flex;
 }
@@ -39,12 +37,10 @@ main {
    margin: 5em auto;
    animation: loading 3s linear infinite;
 }
-
 @keyframes loading {
    0% { transform: rotate(0deg); }
    100% { transform: rotate(360deg); }
 }
-
 .error {
    border: 1px solid red;
    color: red;
@@ -63,7 +59,6 @@ header {
    justify-content: space-between;
    background-color: var(--bg-reg);
 }
-
 .nav-bar__list {
    list-style: none;
    display: block;
@@ -78,56 +73,45 @@ header {
    border-top: 1px solid #000;
    border-bottom: 1px solid #000;
 }
-
 .nav-bar__list.show-nav {
    left: 0;
 }
-
 .nav-bar__list li {
    padding: 0.5em 0;
 }
-
 .nav-bar__list li a,
 .logo a {
    text-decoration: none;
    color: #000;
 }
-
 .logo a {
    font-size: 1.35em;
    font-weight: var(--fw-bold);
 }
-
 .nav-bar__list li a {
    font-size: 1.225em;
    text-decoration: underline transparent;
    transition: text-decoration 300ms ease; 
 }
-
 .hamburger-menu {
    cursor: pointer;
 }
-
 .header-right-side {
    display: flex;
    gap: 0.35em;
    align-items: center;
 }
-
 .hamburger-menu,
 .instagram-logo {
    display: flex;
 }
-
 header i {
    font-size: 1.5em;
    color: #000;
 }
-
 .nav-bar__list li a:hover {
    text-decoration-color: #000;
 }
-
 .nav-bar__list li a.active-page {
    font-weight: var(--fw-bold);
 }
@@ -140,13 +124,11 @@ footer {
    text-align: center;
    gap: 1em;
 }
-
 .social-media-icons {
    gap: 1em;
    justify-content: center;
    font-size: 2em;
 }
-
 footer p {
    font-size: 18px;
 }
@@ -166,11 +148,9 @@ footer p {
       height: 100px;
       max-width: 93.75em;
    }
-
    .hamburger-menu {
       display: none;
    }
-
    .nav-bar__list {
       position: static;
       display: flex;
@@ -178,11 +158,9 @@ footer p {
       gap: 2em;
       border: none;
    }
-
    .header-right-side {
       gap: 2em;
    }
-
    .logo a {
       font-size: 2em;
    }

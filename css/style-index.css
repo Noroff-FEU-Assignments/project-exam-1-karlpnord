@@ -6,7 +6,6 @@
    max-width: 30em;
    margin: 0 auto;
 }
-
 .hero-section__image img {
    width: 100%;
    max-height: 400px;
@@ -21,20 +20,17 @@
    width: 100%;
    padding: 4em 0;
 }
-
 .recent-posts-heading,
 .recent-posts-container {
    width: 90%;
    max-width: 30em;
    margin: 0 auto;
 }
-
 .recent-posts__post img {
    width: 100%;
    height: auto;
-   box-shadow: 1px -1px 29px 2px rgba(0,0,0,0.2);
+   box-shadow: var(--bs-reg);
 }
-
 .recent-posts__post {
    transition: all 300ms ease;
    cursor: pointer;
@@ -45,12 +41,10 @@
    color: #000;
    text-decoration: none;
 }
-
 .recent-posts__post:hover {
-   box-shadow: 1px -1px 29px 2px rgba(0,0,0,0.2);
+   box-shadow: var(--bs-reg);
    transform: translateY(-0.5em);
 }
-
 .post-description,
 .post-ingredients-heading,
 .post-ingredients-list,
@@ -58,35 +52,28 @@
 .post-instruction-heading {
    display: none;
 }
-
 .buttons {
    display: none;
 }
-
 .recent-posts {
    gap: 4em;
    display: flex;
    flex-direction: column;
 }
-
 .recent-posts-heading {
    text-align: center;
 }
-
 .recent-posts-heading h2 {
    font-size: 1.75em;
 }
-
 .recent-posts-heading p {
    max-width: 31.25em;
    margin: 2em auto;
 }
-
 .post-date {
    font-weight: var(--fw-light);
    font-size: 0.85em;
 }
-
 .post-title {
    font-size: 1.75em;
 }
@@ -108,14 +95,12 @@
    margin-bottom: 4em;
    text-align: center;
 }
-
 .contact-section h2 {
    color: #fff;
    font-size: 2em;
    letter-spacing: 1.5px;
    padding: 0 1em;
 }
-
 .contact-section button {
    border: none;
    background-color: #000;
@@ -124,7 +109,6 @@
    font-size: 1.35em;
    transition: 300ms ease;
 }
-
 .contact-section button:hover {
    background-color: #4a4a4a;
 }
@@ -133,24 +117,19 @@
    /** Hero section **/
    .hero-section {
       gap: 4em;
-      padding: 4em 0;
       max-width: 93.75em;
    }
-
    .hero-section__image img {
       max-height: 600px;
    }
-
    .hero-section__image,
    .hero-section__header {
       flex: 1;
    }
-
    .hero-section__header h1 {
       max-width: 20em;
       font-size: 1.6em;
    }
-
    .hero-section__header {
       display: flex;
       flex-direction: column;
@@ -163,11 +142,9 @@
       padding: 4em 0;
       margin-top: 5em;
    }
-
    .recent-posts-heading h2 {
       font-size: 2em;
    }
-
    .recent-posts-heading,
    .recent-posts-container {
       max-width: 93.75em;
@@ -183,17 +160,16 @@
 }
 
 @media (min-width: 1000px) {
+   /** Recent Posts and Buttons for Carousel **/
    .recent-posts {
       flex-direction: row;
    }
-
    .buttons {
       display: flex;
       justify-content: center;
       margin: 4em 0;
       gap: 2em;
    }
-
    .buttons button {
       border-radius: 0.25em;
       width: 50px;
@@ -203,16 +179,13 @@
       outline: none;
       border: 1px solid rgb(169, 169, 169);
    }
-
    .buttons button:hover {
       background: lightgrey;
    }
-
    .buttons button.disabled:hover {
       cursor: default;
       background: #fff;
    }
-
    .buttons button i {
       font-size: 2em;
    }
@@ -223,7 +196,6 @@
    .hero-section {
       gap: 6em;
    }
-
    .hero-section__header h1 {
       font-size: 2em;
    }

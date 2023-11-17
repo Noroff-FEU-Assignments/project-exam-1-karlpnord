@@ -1,18 +1,13 @@
-main {
-   margin: 4em 0;
-}
-
+/** Post details styling **/
 .post-container img{
    width: 100%;
    height: auto;
-   box-shadow: 1px -1px 29px 2px rgba(0,0,0,0.2);
+   box-shadow: var(--bs-reg);
    border-radius: 0.25em;
 }
-
 .post-container img:hover {
    cursor: pointer;
 }
-
 .post-container {
    width: 90%;
    margin: 0 auto;
@@ -23,37 +18,30 @@ main {
    gap: 1em;
    background-color: #fff;
 }
-
 .post-instruction-list,
 .post-ingredients-list {
    list-style: none;
 }
-
 .post-date {
    display: none;
 }
-
 .post-title {
    font-size: 2em;
 }
-
 .post-description {
    font-size: 14px;
 }
-
 .post-ingredients-heading,
 .post-instruction-heading {
    font-size: 1.625em;
    margin-top: 2em;
 }
-
 .post-ingredients-list,
 .post-instruction-list {
    display: flex;
    flex-direction: column;
    gap: 1em;
 }
-
 .post-instruction-list {
    padding: 0 3em 3em;
    font-size: 14px;
@@ -70,24 +58,21 @@ main {
 .modal-container .post-instruction-list {
    display: none;
 }
-
 .modal-container img {
    width: 100%;
    height: auto;
 }
-
 dialog {
    width: 90%;
    margin: 0 auto;
    border: none;
-   box-shadow: 1px -1px 29px 2px rgba(0,0,0,0.2);
+   box-shadow: var(--bs-reg);
    border-radius: 0.25em;
    max-width: 37.5em;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
 }
-
 dialog::backdrop {
    background-color: rgba(0,0,0,0.35);
 }
@@ -97,15 +82,12 @@ dialog::backdrop {
       padding: 6em;
       max-width: 45em;
    }
-
    main {
       margin: 0;
    }
-
    .post-instruction-list {
       padding: 0 2em;
    }
-
    dialog {
       width: 100%;
    }
