@@ -4,17 +4,18 @@ main {
    max-width: 42.5em;
    margin: 2em auto;
 }
-
 .information-section {
    gap: 2em;
 }
-
 .information-section__details {
    gap: 1em;
 }
-
 .form__item {
    gap: 1em;
+}
+
+.information-section__details h2 {
+   font-size: 1em;
 }
 
 /** CTA **/
@@ -28,20 +29,16 @@ main {
    margin-top: 1.5em;
    background-color: #000;
 }
-
 .cta-disabled {
    background-color: #c4c4c4;
 }
-
 .cta-enabled {
    background-color: #000;
    transition: 300ms ease;
 }
-
 .cta-disabled:hover {
    cursor: default;
 }
-
 .cta-enabled:hover {
    cursor: pointer;
    background-color: #4f4f4f;
@@ -51,39 +48,32 @@ main {
 input {
    height: 40px;
 }
-
 textarea {
    height: 100px;
    resize: none;
 }
-
 label {
    font-weight: var(--fw-light);
-   font-size: 0.9em;
+   font-size: 1em;
    margin-bottom: -15px;
 }
-
 form {
    gap: 1em;
 }
-
 input:focus,
 textarea:focus {
    border: 3px solid #767676;
    outline: none;
 }
-
 input,
 textarea {
    padding-left: 5px;
    font-family: var(--ff-poppins);
    border: 1px solid #767676;
 }
-
 textarea {
    padding-top: 5px;
 }
-
 .input-error {
    display: none;
    color: red;
@@ -91,9 +81,8 @@ textarea {
    margin-top: -12px;
    margin-left: 2px;
 }
-
 .input-required {
-   font-size: 10px;
+   font-size: 12px;
 } 
 
 /** Overlay Container **/
@@ -111,7 +100,6 @@ textarea {
    gap: 2em;
    padding: 2.5em 1.5em; 
 }
-
 .close-button {
    position: absolute;
    top: 0;
@@ -122,11 +110,9 @@ textarea {
    cursor: pointer;
    background-color: var(--bg-reg);
 }
-
 .cta-overlay {
    width: 100%;
 }
-
 .overlay-container__info {
    gap: 0.5em;
    margin-top: 2em;
@@ -136,5 +122,11 @@ textarea {
    .cta-overlay,
    .overlay-container__info {
       width: 50%;
+   }
+   .information-section__details h2 {
+      font-size: 1.25em;
+   }
+   .information-section__details {
+      gap: 3em;
    }
 }
