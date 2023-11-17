@@ -108,6 +108,7 @@
    padding: 0.75em 2em;
    font-size: 1.35em;
    transition: 300ms ease;
+   font-family: var(--ff-poppins);
 }
 .contact-section button:hover {
    background-color: #4a4a4a;
