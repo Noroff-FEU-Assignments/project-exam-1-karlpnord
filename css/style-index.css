@@ -190,6 +190,10 @@
    .buttons button i {
       font-size: 2em;
    }
+   .button-name {
+      visibility: hidden;
+      position: absolute;
+   }
 }
 
 @media (min-width: 1200px) {
