@@ -105,10 +105,11 @@
    border: none;
    background-color: #000;
    color: #fff;
-   padding: 0.75em 2em;
+   padding: 0.5em 2em;
    font-size: 1.35em;
    transition: 300ms ease;
    font-family: var(--ff-poppins);
+   cursor: pointer;
 }
 .contact-section button:hover {
    background-color: #4a4a4a;

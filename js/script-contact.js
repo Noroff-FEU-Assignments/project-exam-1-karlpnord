@@ -117,17 +117,23 @@ submit.addEventListener("click", function (e) {
 
    overlayContainer.innerHTML = 
       `
-         <button class="close-button close-overlay"><i        class="fa-solid fa-xmark"></i></button>
+         <button class="close-button close-overlay"><i class="fa-solid fa-xmark"></i></button>
          <div class="flex-col overlay-container__info">
             <h3>Your message has been sent!</h3>
             <p>Please be patient as we try to solve your question as fast as possible</p>
+            <p>Meanwhile, please check out our blog posts!</p>
          </div>
          <button class="cta cta-overlay">View Posts</button>
       `;
 
    const closeOverlay = overlayContainer.querySelector(".close-button");
    closeOverlay.addEventListener("click", removeOverlay);
+   const nextPageOverlay = overlayContainer.querySelector(".cta-overlay");
+   nextPageOverlay.addEventListener("click", locateToBlogs);
    
+   function locateToBlogs() {
+      window.location.href = "/html/blogs.html";
+   }
 
    function removeOverlay() {
       overlayContainer.style.display = "none";
