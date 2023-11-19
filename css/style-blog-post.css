@@ -64,6 +64,7 @@
 }
 dialog {
    width: 90%;
+   height: fit-content;
    margin: 0 auto;
    border: none;
    box-shadow: var(--bs-reg);
@@ -78,18 +79,42 @@ dialog::backdrop {
 }
 
 @media (min-width: 730px) {
-   .post-container {
-      padding: 6em;
-      max-width: 45em;
-   }
-   main {
-      margin: 0;
-   }
    .post-instruction-list {
       padding: 0 2em;
    }
    dialog {
       width: 100%;
+   }
+   .post-container {
+      padding: 2em;
+      max-width: 50em;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(4, auto);
+      column-gap: 2em;
+      row-gap: 0.5em;
+   }
+   .post-image {
+      grid-row: 1 / span 2;
+   }
+   .post-title {
+      grid-column: 2 / 2;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+   }
+   .post-description {
+      grid-column: 2 / 2;
+   }
+   .post-ingredients-list {
+      grid-column: 1 / 2;
+   }
+   .post-instruction-list {
+      grid-column: 2 / 2;
+   }
+   .post-instruction-heading {
+      grid-row: 3 / 4;
+      grid-column: 2 / 3;
    }
 }
 

@@ -64,8 +64,8 @@ header {
    display: block;
    text-align: center;
    padding: 1em 0;
-   transition: 300ms ease;
-   position: fixed;
+   transition: 350ms ease;
+   position: absolute;
    top: 80px;
    left: -100%;
    width: 100%;
