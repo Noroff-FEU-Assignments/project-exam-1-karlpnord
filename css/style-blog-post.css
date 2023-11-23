@@ -4,10 +4,15 @@
    height: auto;
    box-shadow: var(--bs-reg);
    border-radius: 0.25em;
+   transition: 300ms ease;
+   margin-bottom: 2em;
 }
+
 .post-container img:hover {
    cursor: pointer;
+   transform: scale(1.05);
 }
+
 .post-container {
    width: 90%;
    margin: 0 auto;
@@ -18,30 +23,37 @@
    gap: 1em;
    background-color: #fff;
 }
+
 .post-instruction-list,
 .post-ingredients-list {
    list-style: none;
 }
+
 .post-date {
    display: none;
 }
+
 .post-title {
    font-size: 2em;
 }
+
 .post-description {
    font-size: 14px;
 }
+
 .post-ingredients-heading,
 .post-instruction-heading {
    font-size: 1.625em;
    margin-top: 2em;
 }
+
 .post-ingredients-list,
 .post-instruction-list {
    display: flex;
    flex-direction: column;
    gap: 1em;
 }
+
 .post-instruction-list {
    font-size: 14px;
    gap: 1.5em;
@@ -57,30 +69,42 @@
 .modal-container .post-instruction-list {
    display: none;
 }
-.modal-container img {
+
+.modal-container {
+   z-index: 999999;
+   width: 100%;
+   height: 100vh;
+   margin: 0 auto;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background-color: rgba(0,0,0,0.2);
+   backdrop-filter: blur(3px);
+   visibility: hidden;
+   opacity: 0;
+   transition: 300ms ease;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.modal-container.active{
+   visibility: visible;
+   opacity: 1;
+}
+
+.modal-container-body{
+   width: 90%;
+   max-width: 600px;
+}
+
+.modal-container-body img {
    width: 100%;
    height: auto;
-}
-dialog {
-   width: 90%;
-   height: fit-content;
-   margin: 0 auto;
-   border: none;
-   box-shadow: var(--bs-reg);
    border-radius: 0.25em;
-   max-width: 37.5em;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-}
-dialog::backdrop {
-   background-color: rgba(0,0,0,0.35);
 }
 
 @media (min-width: 730px) {
-   dialog {
-      width: 100%;
-   }
    .post-container {
       padding: 4em 3em;
       max-width: 50em;
@@ -90,48 +114,48 @@ dialog::backdrop {
       column-gap: 3em;
       row-gap: 0.5em;
    }
+
    .post-image {
       grid-column: 2 / span 2;
    }
+
    .post-title {
       grid-column: 2 / span 2;
    }
+
    .post-description {
       grid-column: 2 / span 2;
    }
+   
    .post-ingredients-heading {
       grid-row: 4 / 5;
       grid-column: 1 / 3;
    }
+
    .post-instruction-heading {
       grid-row: 4 / 5;
       grid-column: 3 / 5;
    }
+
    .post-ingredients-list {
       grid-row: 5 / 6;
       grid-column: 1 / 3;
       font-size: 13px;
    }
+
    .post-instruction-list {
       grid-row: 5 / 6;
       grid-column: 3 / 5;
       font-size: 14px;
    }
+
    .post-instruction-list,
    .post-ingredients-list {
       padding: 1em 0;
    }
+
    .post-ingredients-heading,
    .post-instruction-heading {
       margin-top: 4em;
-   }
-}
-
-@media (min-width: 1200px) {
-   dialog {
-      top: 0;
-      left: 0;
-      margin: 8% auto;
-      transform: none;
    }
 }

@@ -30,22 +30,22 @@ function handlePosts(data) {
 
    const image = container.querySelector(".post-image img");
    image.addEventListener("click", openModal);
-   const modal = document.querySelector("[data-modal]");
-   const modalContainer = document.querySelector(".modal-container");
+   const modal = document.querySelector(".modal-container");
+   const modalContainer = document.querySelector(".modal-container-body");
 
    function openModal() {
       modalContainer.innerHTML = `${data.content.rendered}`;
-      modal.showModal();
+      modal.classList.add("active");
    }
 
    modal.addEventListener("click", function(event) {
       // Check if the user clicks inside the modal
-      const isOutside = event.target.closest(".modal-container");
+      const isOutside = event.target.closest(".modal-container-body");
 
       // If not (modal will be = null), close the modal!
       if(!isOutside) {
          modalContainer.innerHTML = "";
-         modal.close();
+         modal.classList.remove("active");
       }
    })
 }

@@ -28,7 +28,8 @@ main {
    text-decoration: none;
 }
 .all-posts__post:hover {
-   transform: translateY(-0.5em);
+   box-shadow: var(--bs-reg);
+   transform: scale(1.05);
 }
 .all-posts__post img{
    width: 100%;
