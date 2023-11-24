@@ -75,17 +75,18 @@ header {
    top: 80px;
    left: -100%;
    width: 100%;
-   background: #F4F4F3;
+   background: var(--bg-reg);
    border-top: 1px solid #000;
    border-bottom: 1px solid #000;
 }
 
 .nav-bar__list.show-nav {
    left: 0;
+   box-shadow: 0px 10px 5px hsl(0, 0, 0, 0.1);
 }
 
 .nav-bar__list li {
-   padding: 0.5em 0;
+   padding: 1em 0;
 }
 
 .nav-bar__list li a,
@@ -93,11 +94,16 @@ header {
    text-decoration: none;
    color: #000;
    transition: 300ms ease;
+   text-transform: uppercase;
 }
 
-.logo a {
+.logo a i{
    font-size: 1.35em;
-   font-weight: var(--fw-bold);
+}
+
+.logo a span{
+   font-weight: var(--fw-sbold);
+   font-size: 1.5em;
 }
 
 .hamburger-menu {
@@ -113,10 +119,10 @@ header {
 .hamburger-menu,
 .instagram-logo {
    display: flex;
+   font-size: 1.65em;
 }
 
-header i {
-   font-size: 1.5em;
+.instagram-logo i{
    color: var(--color2);
 }
 
@@ -130,7 +136,7 @@ header i {
 }
 
 .nav-bar__list li a.active-page {
-   font-weight: var(--fw-bold);
+   font-weight: var(--fw-sbold);
 }
 
 /** Footer **/
@@ -151,6 +157,7 @@ footer {
 
 footer p {
    font-size: 18px;
+   font-weight: var(--fw-medium);
 }
 
 /** Responsive **/
@@ -185,7 +192,11 @@ footer p {
       gap: 2em;
    }
 
-   .logo a {
+   .logo a span{
       font-size: 2em;
+   }
+
+   .logo a i{
+      font-size: 1.75em;
    }
 }

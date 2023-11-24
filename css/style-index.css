@@ -12,6 +12,15 @@
    max-height: 400px;
    object-fit: cover;
    object-position: 25% 25%;
+   box-shadow: var(--bs-reg);
+}
+
+.hero-section__header h1 span{
+   color: var(--color2);
+}
+
+.hero-section__header p{
+   font-weight: var(--fw-medium);
 }
 
 /** Recent posts **/
@@ -76,11 +85,15 @@
 
 .recent-posts-heading h2 {
    font-size: 1.75em;
+   font-weight: var(--fw-sbold);
 }
 
 .recent-posts-heading p {
    max-width: 31.25em;
    margin: 2em auto;
+   padding: 0 2em;
+   font-weight: var(--fw-light);
+   font-size: 14px;
 }
 
 .post-date {
@@ -90,6 +103,7 @@
 
 .post-title {
    font-size: 1.75em;
+   font-weight: var(--fw-medium);
 }
 
 /** Contact Section **/
@@ -102,7 +116,7 @@
    background-image: url(/images/contact-image.png);
    background-repeat: no-repeat;
    background-size: cover;
-   min-height: 100vh;
+   min-height: 60vh;
    justify-content: center;
    align-items: center;
    gap: 2em;

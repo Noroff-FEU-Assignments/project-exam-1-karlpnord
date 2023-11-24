@@ -1,11 +1,9 @@
-@font-face {
-   font-family: "Poppins";
-   src: url("/fonts/Poppins-Regular.ttf") format("truetype");
-}
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
    --ff-poppins: "Poppins", sans-serif;
    --fw-light: 300;
+   --fw-regular: 400;
    --fw-medium: 500;
    --fw-sbold: 600;
    --fw-bold: 700;
