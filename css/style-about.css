@@ -2,8 +2,6 @@
 main {
    width: 90%;
    max-width: 30em;
-   display: flex;
-   flex-direction: column;
    gap: 5em;
 }
 
