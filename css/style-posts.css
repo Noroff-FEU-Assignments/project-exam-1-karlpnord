@@ -20,28 +20,33 @@ main {
    gap: 0.5em;
    padding: 2em;
    transition: 300ms ease;
-   background: #fff;
+   background: rgb(209,96,61);
+   background: linear-gradient(180deg, rgba(209,96,61,1) 60%, rgba(255, 255, 255, 1) 75%);
    box-shadow: var(--bs-reg);
    cursor: pointer;
    border-radius: 0.25em;
    color: #000;
    text-decoration: none;
 }
+
 .all-posts__post:hover {
    box-shadow: var(--bs-reg);
    transform: scale(1.05);
 }
+
 .all-posts__post img{
    width: 100%;
    height: auto;
    box-shadow: var(--bs-reg);
 }
+
 .post-ingredients-heading,
 .post-ingredients-list,
 .post-instruction-heading,
 .post-instruction-list {
    display: none;
 }
+
 .post-description {
    font-size: 12px;
 }
@@ -50,19 +55,12 @@ main {
 .view-more {
    width: fit-content;
    align-self: flex-end;
-   padding: 0.5em;
-   background-color: #fff;
-   transition: 300ms ease;
-   cursor: pointer;
-   border: 1px solid #c4c4c4;
-   border-radius: 0.25em;
+   padding: 0.5em 1em;
 }
-.view-more:hover {
-   box-shadow: var(--bs-reg);
-   transform: translateY(-0.1em);
-}
+
 .view-more__text {
    font-family: var(--ff-poppins);
+   font-weight: var(--fw-sbold);
 }
 
 /** Responsive Design **/
@@ -70,6 +68,7 @@ main {
    main {
       max-width: 93.75em;
    }
+   
    .posts-container {
       display: grid;
       grid-template-columns: 1fr 1fr;

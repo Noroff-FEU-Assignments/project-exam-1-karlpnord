@@ -1,8 +1,7 @@
 /** Page styling **/
 main {
    width: 90%;
-   max-width: 42.5em;
-   margin: 2em auto;
+   max-width: 30em;
 }
 
 .information-section {
@@ -17,37 +16,55 @@ main {
    gap: 1em;
 }
 
+.information-section h1{
+   font-size: 1.75em;
+}
+
 .information-section__details h2 {
    font-size: 1em;
 }
 
 /** CTA **/
 .cta {
-   color: #fff;
-   border: none;
-   height: 40px;
-   width: 33%;
-   font-size: 1em;
-   font-family: var(--ff-poppins);
    margin-top: 1.5em;
+   width: fit-content;
+}
+
+.cta-disabled,
+.cta-enabled{
+   padding: 0.5em 6em;
 }
 
 .cta-disabled {
    background-color: #c4c4c4;
 }
 
-.cta-enabled {
-   background-color: var(--color2);
+.cta-disabled:hover {
+   cursor: default;
+   transform: none;
+   background-color: #c4c4c4;
+}
+
+.cta-overlay {
+   margin: 0;
+   padding: 0.5em 2em;
+   margin-bottom: 2em;
+}
+
+.close-button {
+   position: absolute;
+   top: 0;
+   right: 0;
+   border: none;
+   font-size: 1.5em;
+   padding: 0.25em;
+   cursor: pointer;
+   background-color: var(--bg-reg);
    transition: 300ms ease;
 }
 
-.cta-disabled:hover {
-   cursor: default;
-}
-
-.cta-enabled:hover {
-   cursor: pointer;
-   background-color: var(--color2-hover);
+.close-button:hover{
+   color: var(--text-color-hover);
 }
 
 /** Form styling **/
@@ -61,7 +78,7 @@ textarea {
 }
 
 label {
-   font-weight: var(--fw-light);
+   font-weight: var(--fw-medium);
    font-size: 1em;
    margin-bottom: -15px;
 }
@@ -97,12 +114,18 @@ textarea {
 
 .input-required {
    font-size: 12px;
-} 
+   font-weight: var(--fw-light);
+}
+
+.form-complete{
+   color: green;
+   font-weight: var(--fw-medium);
+}
 
 /** Overlay Container **/
 .overlay-container {
    width: 90%;
-   max-width: 42.5em;
+   max-width: 30em;
    background-color: var(--bg-reg);
    position: absolute;
    top: 50%;
@@ -113,21 +136,6 @@ textarea {
    align-items: center;
    gap: 2em;
    padding: 2.5em 1.5em; 
-}
-
-.close-button {
-   position: absolute;
-   top: 0;
-   right: 0;
-   border: none;
-   font-size: 1.5em;
-   padding: 0.25em;
-   cursor: pointer;
-   background-color: var(--bg-reg);
-}
-
-.cta-overlay {
-   width: 100%;
 }
 
 .overlay-container__info {
@@ -147,5 +155,10 @@ textarea {
 
    .information-section__details {
       gap: 3em;
+   }
+
+   main,
+   .overlay-container{
+      max-width: 40em;
    }
 }

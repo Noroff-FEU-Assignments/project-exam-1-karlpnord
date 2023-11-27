@@ -22,6 +22,14 @@ main {
    font-size: 14px;
 }
 
+.info-section h1 span{
+   color: var(--color2);
+}
+
+.info-section h1{
+   font-size: 1.5em;
+}
+
 /** Image section **/
 .image-section {
    margin: 0 auto;

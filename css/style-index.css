@@ -5,6 +5,7 @@
    width: 90%;
    max-width: 30em;
    margin: 0 auto;
+   text-align: center;
 }
 
 .hero-section__image img {
@@ -48,7 +49,8 @@
    transition: all 300ms ease;
    cursor: pointer;
    padding: 2em;
-   background-color: var(--bg-reg);
+   background: rgb(209,96,61);
+   background: linear-gradient(180deg, rgba(209,96,61,1) 60%, rgba(244,244,243,1) 75%);
    max-width: 32.5em;
    margin: 0 auto;
    color: #000;
@@ -85,7 +87,7 @@
 
 .recent-posts-heading h2 {
    font-size: 1.75em;
-   font-weight: var(--fw-sbold);
+   font-weight: var(--fw-bold);
 }
 
 .recent-posts-heading p {
@@ -97,13 +99,14 @@
 }
 
 .post-date {
-   font-weight: var(--fw-light);
+   font-weight: var(--fw-regular);
    font-size: 0.85em;
+   margin-top: 1em;
 }
 
 .post-title {
    font-size: 1.75em;
-   font-weight: var(--fw-medium);
+   font-weight: var(--fw-sbold);
 }
 
 /** Contact Section **/
@@ -133,20 +136,8 @@
 }
 
 .contact-section button {
-   border: none;
-   border-radius: 0.25em;
-   background-color: var(--color2);
-   color: #fff;
    padding: 0.5em 2em;
    font-size: 1.35em;
-   transition: 300ms ease;
-   font-family: var(--ff-poppins);
-   cursor: pointer;
-}
-
-.contact-section button:hover {
-   background-color: var(--color2-hover);
-   transform: scale(1.05);
 }
 
 @media (min-width: 730px) {
@@ -154,6 +145,7 @@
    .hero-section {
       gap: 4em;
       max-width: 93.75em;
+      text-align: left;
    }
 
    .hero-section__image img {

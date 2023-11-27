@@ -16,7 +16,7 @@ main {
    display: flex;
    flex-direction: column;
    gap: 3em;
-   margin: 2em auto;
+   margin: 2em auto 5em;
 }
 
 /** Utility Classes **/
@@ -158,6 +158,23 @@ footer {
 footer p {
    font-size: 18px;
    font-weight: var(--fw-medium);
+}
+
+/** CTA **/
+.cta{
+   font-size: 1em;
+   font-family: var(--ff-poppins);
+   border: none;
+   color: #fff;
+   border-radius: 0.25em;
+   background-color: var(--color2);
+   transition: 300ms ease;
+   cursor: pointer;
+}
+
+.cta:hover{
+   background-color: var(--color2-hover);
+   transform: scale(1.025);
 }
 
 /** Responsive **/
