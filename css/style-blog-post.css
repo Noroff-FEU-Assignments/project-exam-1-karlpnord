@@ -57,6 +57,7 @@
 .post-instruction-list {
    font-size: 14px;
    gap: 1.5em;
+   padding: 0 2em 2em 2em;
 }
 
 /** Modal styling **/
