@@ -17,10 +17,8 @@ main {
    gap: 0.5em;
    padding: 2em;
    transition: 300ms ease;
-   background: rgb(198,82,47);
-   background: linear-gradient(180deg, rgba(198,82,47,1) 50%, rgba(236,158,134,1) 100%);
-   border: 1px solid rgb(132, 42, 14);
-   border-bottom: 1px solid var(--color2);
+   background: var(--bg-reg);
+   border-bottom: 1px solid #b5b5b5;
    box-shadow: var(--bs-reg);
    cursor: pointer;
    border-radius: 0.25em;
@@ -29,14 +27,12 @@ main {
 }
 
 .all-posts__post:hover {
-   box-shadow: var(--bs-reg);
    transform: scale(1.05);
 }
 
 .all-posts__post img{
    width: 100%;
    height: auto;
-   box-shadow: var(--bs-reg);
 }
 
 .post-ingredients-heading,
@@ -52,6 +48,10 @@ main {
 
 .post-title{
    font-size: 1.75em;
+}
+
+.post-date{
+   font-size: 0.75em;
 }
 
 /** View more button **/
