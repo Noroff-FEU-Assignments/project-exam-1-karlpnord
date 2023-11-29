@@ -116,7 +116,7 @@
    margin: 0 auto;
    background: #888;
    background-blend-mode: multiply;
-   background-image: url(/images/contact-image.png);
+   background-image: url(/images/contact-image-mobile.png);
    background-repeat: no-repeat;
    background-size: cover;
    min-height: 60vh;

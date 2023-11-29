@@ -21,7 +21,7 @@ main {
    background: linear-gradient(180deg, rgba(209,96,61,1) 60%, rgba(255, 255, 255, 1) 75%);
    box-shadow: var(--bs-reg);
    cursor: pointer;
-   border-radius: 0.25em;
+   border-radius: 0.75em;
    color: #000;
    text-decoration: none;
 }
