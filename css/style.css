@@ -33,7 +33,7 @@ main {
 /** Loading API and API error **/
 .loading {
    border: 24px solid #c4c4c4;
-   border-top: 24px solid #000;
+   border-top: 24px solid var(--color2);
    border-radius: 50%;
    width: 200px;
    height: 200px;
