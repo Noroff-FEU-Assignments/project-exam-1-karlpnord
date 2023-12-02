@@ -1,4 +1,6 @@
 const container = document.querySelector(".recent-posts");
+
+/* Counter for the carousel */
 let count = 3;
 
 const nextButton = document.querySelector(".nextButton");
@@ -31,6 +33,7 @@ async function handlePosts(data) {
    nextButton.addEventListener("click", nextSlide);
    prevButton.addEventListener("click", prevSlide);
 
+   /* Next slide button, loops 3 times, adds new post to carousel, increments the count by 1 and lastly check the length of the count*/
    function nextSlide() {
       container.innerHTML = "";
       for(var i = 0; i < 3; i++) {
@@ -40,6 +43,7 @@ async function handlePosts(data) {
       }
    }
    
+   /* Same as the previous function, but for previous slides. before the loop, subtracts 6 from the count, this way the posts show up the same order as when clicking next slide button */
    function prevSlide() {
       count = count - 6;
       container.innerHTML = "";
@@ -61,6 +65,7 @@ async function handlePosts(data) {
 
 getApi();
 
+/* Function to check if the count is longer or smaller than the length of all the blog posts */
 function checkCount() {
    if(count <= 3) {
       prevButton.disabled = true;

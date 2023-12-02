@@ -20,7 +20,6 @@
    </script>
 </head>
 <body>
-
    <header>
       <div class="logo">
          <a href="/index.html">
@@ -44,8 +43,7 @@
          </div>
       </div>
    </header>
-
-   <main>
+   <main class="flex-col">
       <section class="information-section flex-col">
          <h1>Get in touch.</h1>
          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae tempora at aspernatur numquam dolorum rerum pariatur quibusdam consequatur perspiciatis fuga magnam culpa, blanditiis animi architecto quos obcaecati sunt ut provident assumenda eos. Nesciunt doloribus fugit soluta laboriosam ratione, expedita iusto, sed, recusandae itaque voluptatibus non exercitationem et nihil in voluptates.</p>
@@ -61,45 +59,38 @@
          </div>
       </section>
       <form class="flex-col form">
-         
          <div class="form__item flex-col">
             <label for="name">Name <span class="input-required">(min 8 characters)</span></label>
             <input type="text" id="name" name="name">
             <div class="input-error" id="nameError">Min 8 characters</div>
          </div>
-         
          <div class="form__item flex-col">
             <label for="email">Email <span class="input-required">(required)</span></label>
             <input type="email" id="email" name="email">
             <div class="input-error" id="emailError">Invalid email</div>
          </div>
-         
          <div class="form__item flex-col">
             <label for="subject">Subject <span class="input-required">(min 15 characters)</span></label>
             <input type="text" id="subject" name="subject">
             <div class="input-error" id="subjectError">Min 15 characters</div>
          </div>
-         
          <div class="form__item flex-col">
             <label for="message">Message <span class="input-required">(min 25 characters)</span></label>
             <textarea name="message" id="message"></textarea>
             <div class="input-error" id="messageError">Min 25 characters</div>
          </div>
-         
          <div class="form-complete"></div>
          <button class="cta cta-disabled cta-submit" disabled>Send</button>
       </form>
    </main>
-
    <footer class="flex-col">
      <div class="social-media-icons flex-row">
-      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-twitter"></i>
       <i class="fa-brands fa-youtube"></i>
       <i class="fa-brands fa-facebook"></i>
      </div>
      <p>Copyright 2023 &copy; Karl's Food Blog</p>
    </footer>
-
    <script src="/js/script.js"></script>
    <script src="/js/script-contact.js"></script>
 </body>

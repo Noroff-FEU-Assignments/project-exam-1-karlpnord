@@ -3,6 +3,8 @@ main {
    width: 90%;
    max-width: 30em;
    gap: 5em;
+   display: flex;
+   flex-direction: column;
 }
 
 .info-section,

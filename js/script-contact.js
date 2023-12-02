@@ -16,6 +16,7 @@ const mainContainer = document.querySelector("main");
 const infoSection = document.querySelector(".information-section");
 const confirmSection = document.querySelector(".form-complete");
 
+/* Function for checking the Length */
 function checkLength(value, len) {
    if(value.trim().length > len) {
       return true;
@@ -24,6 +25,7 @@ function checkLength(value, len) {
    }
 }
 
+/* Function for validating email */
 function checkEmail(email) {
    const regEx = /\S+@\S+\.\S+/;
    const patternMatches = regEx.test(email);
@@ -86,11 +88,14 @@ message.addEventListener("blur", function() {
    }
 });
 
+/*  */
 name.addEventListener("keyup", validateForm);
 email.addEventListener("keyup", validateForm);
 subject.addEventListener("keyup", validateForm);
 message.addEventListener("keyup", validateForm);
 
+
+/* Validate all input fields */
 function validateForm() {
    if(checkLength(name.value, 7) && checkEmail(email.value) && checkLength(subject.value, 14) && checkLength(message.value, 24)) {
       submit.disabled = false;
@@ -105,6 +110,7 @@ function validateForm() {
    }
 }
 
+/* ModaL overlay when submitting form */
 submit.addEventListener("click", function (e) {
    e.preventDefault();
 

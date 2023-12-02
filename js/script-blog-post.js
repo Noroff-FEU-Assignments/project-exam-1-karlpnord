@@ -42,7 +42,7 @@ function handlePosts(data) {
       // Check if the user clicks inside the modal
       const isOutside = event.target.closest(".modal-container-body");
 
-      // If not (modal will be = null), close the modal!
+      // If not (isOutside will be = null) therefore, close the modal
       if(!isOutside) {
          modalContainer.innerHTML = "";
          modal.classList.remove("active");

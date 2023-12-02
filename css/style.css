@@ -13,8 +13,6 @@ body {
 }
 
 main {
-   display: flex;
-   flex-direction: column;
    gap: 3em;
    margin: 2em auto 5em;
 }
@@ -179,8 +177,6 @@ footer p {
 
 /** Responsive **/
 @media (min-width: 730px) {
-   /** General styling **/
-
    /** Utility Classes **/
    .flex-col-to-row {
       flex-direction: row;
