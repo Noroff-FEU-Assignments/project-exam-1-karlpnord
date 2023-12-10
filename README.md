@@ -2,11 +2,12 @@
 
 ![image](https://i.postimg.cc/Gtm6NT7F/food-blog.jpg)
 
-A simple overview of the use/purpose of the project.
+2nd Semester Project exam. Purpose of the project was to make a blog website, where the blog posts would be fetched from a live hosted WordPress site with API
 
 ## Description
 
 Add a more detailed description of what your project entails and set out to do.
+
 
 You can add some bullet points if you'd like to:
 
@@ -16,8 +17,6 @@ You can add some bullet points if you'd like to:
 
 ## Built With
 
-You can list a the tech stack that you've used over here
-
 - HTML
 - CSS
 - JavaScript
@@ -26,12 +25,10 @@ You can list a the tech stack that you've used over here
 
 ### Installing
 
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
-
 1. Clone the repo:
 
 ```bash
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
+git clone git@github.com:Noroff-FEU-Assignments/project-exam-1-karlpnord.git
 ```
 
 
