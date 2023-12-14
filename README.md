@@ -6,14 +6,12 @@
 
 ## Description
 
-Add a more detailed description of what your project entails and set out to do.
+This food blog is all about making people discover the positive sides of homemade cooking. The blog showcases a large library of recipes to entice the targeted audience into wanting to make food. There are various components on the webpage to increase this:
 
-
-You can add some bullet points if you'd like to:
-
-- List item 1
-- List item 2
-- List item 3
+- A carousel on the homepage, where the user can click next and previous buttons to see a thumbnail of all the various recipes the foog blog has in store
+- A fully functional contact form where the targeted audience can ask questions
+- Every blog post has a modal where the user can press the picture to get a bigger image of the recipe
+- On the all blogs page, there is a view more button. Forcing the user to get a closer look at a few of the recipes before the next ones show up. This increases the likelyhood of them finding something they like.
 
 ## Built With
 
