@@ -28,3 +28,6 @@ This food blog is all about making people discover the positive sides of homemad
 ```bash
 git clone git@github.com:Noroff-FEU-Assignments/project-exam-1-karlpnord.git
 ```
+2. Viewing the site:
+  - Live viewing with Visual Studio Code
+  - Publish to f.ex. GitHub Pages or Netlify
