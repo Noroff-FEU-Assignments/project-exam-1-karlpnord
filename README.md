@@ -28,9 +28,3 @@ This food blog is all about making people discover the positive sides of homemad
 ```bash
 git clone git@github.com:Noroff-FEU-Assignments/project-exam-1-karlpnord.git
 ```
-
-
-1.	You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for. 
-2.	Post the data from the contact form to WordPress so you have the details saved.
-3.	Allow users to submit comments on a blog post, and post this data to WordPress
-
